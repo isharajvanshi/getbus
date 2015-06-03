@@ -1,0 +1,20 @@
+{
+  "name": "busmodule",
+  "version": "0.0.1",
+  "description": "start busmodule for one stop",
+  "main": "app.js",
+  "dependencies": {
+    "restler": "^3.2.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "bus",
+    "seattle",
+    "metro"
+  ],
+  "author": "isharajvanshi",
+  "license": "MIT"
+}
