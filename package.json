@@ -1,6 +1,6 @@
 {
   "name": "busmodule",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "start busmodule for one stop",
   "main": "index.js",
   "dependencies": {
