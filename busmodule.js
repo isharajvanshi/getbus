@@ -33,8 +33,8 @@ function getBusTime(){
                      console.log("stops away:" + data.data.entry.arrivalsAndDepartures[0].numberOfStopsAway);
                      numberOfStopsAway = data.data.entry.arrivalsAndDepartures[0].numberOfStopsAway;
                      //console.log("numberOfStopsAway", numberOfStopsAway);
-                     //return;
                      }
+                     //return numberOfStopsAway;
      });
 };
 exports.getBusTime = getBusTime();
