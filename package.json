@@ -2,7 +2,7 @@
   "name": "busmodule",
   "version": "0.0.1",
   "description": "start busmodule for one stop",
-  "main": "app.js",
+  "main": "index.js",
   "dependencies": {
     "restler": "^3.2.2"
   },

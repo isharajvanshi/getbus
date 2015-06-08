@@ -37,4 +37,4 @@ function getBusTime(){
                      }
      });
 };
-getBusTime();
+exports.getBusTime = getBusTime();
