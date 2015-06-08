@@ -14,27 +14,21 @@ stopurl = OBA_API_URL + 'arrivals-and-departures-for-stop/' + stopId + '.json?' 
 function getBusTime(){
      rest.get(stopurl).on('complete', function(data) {
      arrivalsAndDepartures = data.data.entry.arrivalsAndDepartures; 
-     //console.log(data);
     for(i = 0; i < arrivalsAndDepartures.length; i++){
-                     //console.log('stops away ',arrivalsAndDepartures[i].numberOfStopsAway); 
-                     console.log('bus ',arrivalsAndDepartures[i].routeShortName);
+                     console.log('bus number ',arrivalsAndDepartures[i].routeShortName);
                      shortname = data.data.entry.arrivalsAndDepartures[i].routeShortName; 
                      currentTime = data.currentTime;
                      predictedArrivalTime = arrivalsAndDepartures[i].predictedArrivalTime;
                      deltaTime = predictedArrivalTime - currentTime;
                      secondsAway = deltaTime/1000;
-                     //console.log('deltaTime', deltaTime/1000);
-                     //console.log('currentTime ',data.CurrentTime);
-                     //console.log('currentTime ',data.currentTime);
                      minutesAway = secondsAway/60; 
                      minutesAway = Math.round(minutesAway);
-                     console.log("minutesAway", minutesAway); 
+                     console.log("minutes away", minutesAway); 
                      //console.log('predictedArrivalTime ',arrivalsAndDepartures[i].predictedArrivalTime);
-                     console.log("stops away:" + data.data.entry.arrivalsAndDepartures[0].numberOfStopsAway);
+                     console.log("stops away " + data.data.entry.arrivalsAndDepartures[0].numberOfStopsAway);
                      numberOfStopsAway = data.data.entry.arrivalsAndDepartures[0].numberOfStopsAway;
-                     //console.log("numberOfStopsAway", numberOfStopsAway);
                      }
-                     //return numberOfStopsAway;
+
      });
 };
 exports.getBusTime = getBusTime();
